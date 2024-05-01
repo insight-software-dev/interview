@@ -13,7 +13,7 @@ var app = angular.module('interviewApp', [
 app.controller('companiesCtrl', ['$scope', '$http', function companiesCtrl($scope, $http) {
     $scope.companies = []
     function getCompanies(){
-        $http.get('http://127.0.0.1:5000/companies').then(function(response){
+        $http.get('http://127.0.0.1:5006/companies').then(function(response){
             
             $scope.companies = response.data.objects
         })
@@ -21,7 +21,7 @@ app.controller('companiesCtrl', ['$scope', '$http', function companiesCtrl($scop
     
 
     $scope.addCompany = function(){
-        $http.post('http://127.0.0.1:5000/companies', {name: $scope.newName}).then(function(response){
+        $http.post('http://127.0.0.1:5006/companies', {name: $scope.newName}).then(function(response){
             getCompanies()
         })
     }
