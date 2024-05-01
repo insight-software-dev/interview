@@ -20,6 +20,7 @@
 ## Setup
 - `docker compose up -d interview_db` (db takes a while to start up for the first time so you might need to re-run this command)
 - `docker compose up`
+- Following above the code changes should trigger rebuild of frontend and/or backend. If not docker compose build and up again.
 
 ### DB
 - you can access DB through localhost:3307, username: root, password: insecure
